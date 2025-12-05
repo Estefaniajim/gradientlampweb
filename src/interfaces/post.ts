@@ -1,18 +1,20 @@
-import { type Author } from "./author";
-
-export type Post = {
+export interface Post {
   slug: string;
   title: string;
   date: string;
-  coverImage: string;
-  coverVideo?: string;
-  author: Author;
   excerpt: string;
+
+  coverImage?: string;
+  coverVideo?: string;
+
+
   ogImage: {
     url: string;
   };
-  content: string;
-  preview?: boolean;
+
   carouselImages?: string[];
   inlineImages?: string[];
-};
+
+  content?: string;
+  preview?: boolean;
+}
