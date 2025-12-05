@@ -7,7 +7,7 @@ ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 
 carouselImages:
-    - "/assets/blog/dynamic-routing/both.jpg"
+    - "/assets/blog/dynamic-routing/both.JPG"
     - "/assets/blog/dynamic-routing/both3.jpg"
     - "/assets/blog/dynamic-routing/both4.jpg"
     - "/assets/blog/dynamic-routing/cover.jpg"
