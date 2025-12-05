@@ -20,9 +20,10 @@ export function getPostBySlug(slug: string) {
 
 export function getAllPosts(): Post[] {
   const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug))
-    // sort posts by date in descending order
+  const posts = slugs.map((slug) => getPostBySlug(slug));
+  const productPost = posts.find((p) => p.slug.toLowerCase() === "product");
+  const otherPosts = posts
+    .filter((p) => p.slug.toLowerCase() !== "product")
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-  return posts;
-}
+  return productPost ? [productPost, ...otherPosts] : otherPosts;
+  }
