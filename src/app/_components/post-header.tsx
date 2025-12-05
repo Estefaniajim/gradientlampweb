@@ -15,11 +15,11 @@ export function PostHeader({ title, coverImage, coverVideo }: Props) {
       <div className="hidden md:block md:mb-12" />
 
       <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage
-          title={title}
-          src={coverImage}
-          video={coverVideo}
-        />
+        {coverVideo ? (
+          <CoverVideo title={title} video={coverVideo} slug={post.slug} />
+        ) : (
+          <CoverImage title={title} src={coverImage} slug={post.slug} />
+        )}
       </div>
 
       <div className="max-w-2xl mx-auto">

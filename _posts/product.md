@@ -1,6 +1,7 @@
 ---
 title: "Product"
 excerpt: "Seattle’s winter season brings low light, heavy clouds, and long periods of gloomy weather. As newcomers, we noticed how this affects mood, energy, and daily motivation. Indoor spaces often feel dull and monochromatic, especially during the darker months."
+#coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 coverVideo: "/assets/blog/dynamic-routing/background.mp4"
 ogImage:
   url: "/assets/blog/dynamic-routing/both.JPG"
