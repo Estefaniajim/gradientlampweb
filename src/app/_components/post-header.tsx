@@ -1,4 +1,5 @@
 import CoverImage from "./cover-image";
+import CoverVideo from "./cover-video";
 import { PostTitle } from "@/app/_components/post-title";
 
 type Props = {

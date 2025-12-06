@@ -33,10 +33,10 @@ export default async function Post(props: Params) {
             coverImage={post.coverImage}
             coverVideo={post.coverVideo}
           />
-          <PostBody 
-          content={content} 
-          carouselImages={carouselImages}
-          inlineImages={inlineImages} 
+          <PostBody
+            content={content}
+            carouselImages={carouselImages}
+            inlineImages={inlineImages}
           />
         </article>
       </Container>
