@@ -1,5 +1,6 @@
 import Avatar from "@/app/_components/avatar";
 import CoverImage from "@/app/_components/cover-image";
+import CoverVideo from "@/app/_components/cover-video";
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
@@ -15,6 +16,7 @@ type Props = {
 export function HeroPost({
   title,
   coverImage,
+  coverVideo,
   excerpt,
   slug,
 }: Props) {
@@ -22,7 +24,7 @@ export function HeroPost({
     <section>
       <div className="mb-8 md:mb-16 scale-100 md:scale-60">
         {coverVideo ? (
-          <CoverVideo title={title} src={coverVideo} />
+          <CoverVideo title={title} video={coverVideo} />
         ) : (
           <CoverImage title={title} src={coverImage ?? ""} />
         )}

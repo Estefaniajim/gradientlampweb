@@ -3,6 +3,8 @@ import Link from "next/link";
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
+import CoverVideo from "./cover-video";
+
 
 type Props = {
   title: string;
@@ -15,6 +17,7 @@ type Props = {
 export function PostPreview({
   title,
   coverImage,
+  coverVideo,
   excerpt,
   slug,
 }: Props) {

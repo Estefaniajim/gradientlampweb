@@ -10,5 +10,5 @@ type Props = {
   sizes?: string;
 };
 
-const CoverImage = ({ title, src, slug, quality, sizes }: Props) => { const image = (<Image src={src} alt={Cover Image for ${title}} className = { cn("shadow-sm w-full", { "hover:shadow-lg transition-shadow duration-200": slug, }) } width = { 1300} height = { 630} quality = { quality ?? 75} sizes = { sizes ?? "(max-width: 768px) 100vw, 1300px"}  /> );
-return (<div className="sm:mx-0"> {slug ? (<Link href={/posts/${slug}} aria-label={title}> {image} </Link>) : (image)} </div > ); }; export default CoverImage;
+const CoverImage = ({ title, src, slug, quality, sizes }: Props) => { const image = (<Image src={src} alt={"Cover Image for "+title} className = { cn("shadow-sm w-full", { "hover:shadow-lg transition-shadow duration-200": slug, }) } width = { 1300} height = { 630} quality = { quality ?? 75} sizes = { sizes ?? "(max-width: 768px) 100vw, 1300px"}  /> );
+return (<div className="sm:mx-0"> {slug ? (<Link href={"/posts/"+slug} aria-label={title}> {image} </Link>) : (image)} </div > ); }; export default CoverImage;
