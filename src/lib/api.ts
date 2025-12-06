@@ -15,7 +15,21 @@ export function getPostBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content } as Post;
+  const post: Post = {
+    slug: realSlug,
+    title: data.title ?? "",
+    date: data.date ?? "",
+    excerpt: data.excerpt ?? "",
+    coverImage: data.coverImage ?? "",
+    coverVideo: data.coverVideo ?? "",
+    ogImage: data.ogImage ?? { url: "" },
+    carouselImages: data.carouselImages ?? [],
+    inlineImages: data.inlineImages ?? [],
+    preview: data.preview ?? false,
+    content
+  };
+
+  return post;
 }
 
 export function getAllPosts(): Post[] {
