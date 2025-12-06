@@ -5,10 +5,10 @@ import { PostTitle } from "@/app/_components/post-title";
 type Props = {
   title: string;
   coverImage?: string;
-  coverVideo?: string;   // ← NEW optional field
+  coverVideo?: string;
+  slug: string; 
 };
-
-export function PostHeader({ title, coverImage, coverVideo }: Props) {
+export function PostHeader({ title, coverImage, coverVideo, slug }: Props) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -17,9 +17,9 @@ export function PostHeader({ title, coverImage, coverVideo }: Props) {
 
       <div className="mb-8 md:mb-16 sm:mx-0">
         {coverVideo ? (
-          <CoverVideo title={title} video={coverVideo} slug={post.slug} />
+          <CoverVideo title={title} video={coverVideo} slug={slug} />
         ) : (
-          <CoverImage title={title} src={coverImage} slug={post.slug} />
+          <CoverImage title={title} src={coverImage ?? ""} slug={slug} />
         )}
       </div>
 
