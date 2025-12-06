@@ -18,6 +18,7 @@ export default function Index() {
         <HeroPost
           title={heroPost.title}
           coverImage={heroPost.coverImage}
+          coverVideo={heroPost.coverVideo}
           slug={heroPost.slug}
           excerpt={heroPost.excerpt}
         />
