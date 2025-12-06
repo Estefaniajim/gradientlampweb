@@ -22,16 +22,9 @@ export function HeroPost({
     <section>
       <div className="mb-8 md:mb-16 scale-100 md:scale-60">
         {coverVideo ? (
-          <video
-            src={coverVideo}
-            controls
-            autoPlay
-            loop
-            muted
-            className="w-full rounded-lg shadow-lg"
-          />
+          <CoverVideo title={title} src={coverVideo} />
         ) : (
-          <CoverImage title={title} src={coverImage!} slug={slug} />
+          <CoverImage title={title} src={coverImage ?? ""} />
         )}
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
